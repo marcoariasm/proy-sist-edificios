@@ -1,0 +1,85 @@
+{
+  "uuid": "1341cab0-85f3-4be1-91ac-f2c9483984af",
+  "lastMigration": 24,
+  "name": "Inquilinos",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8000,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "4b8c4d47-e494-4f90-a44a-ecba56d3cf84",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "services/:service/:month",
+      "responses": [
+        {
+          "uuid": "849de4b9-ab85-4265-ba06-a9cdc5346217",
+          "body": "[\r\n  {\r\n\t\t\"user\": \"101\",\r\n\t\t\"month\": \"{{urlParam 'service'}}\",\r\n\t\t\"period\": \"15-{{urlParam 'month'}}\",\r\n\t\t\"initial\": 125.25,\r\n\t\t\"final\": 145.63,\r\n\t\t\"consumption\": 20.47,\r\n\t\t\"rate\": 2.4,\r\n\t\t\"ammount\": 45.36\r\n\t},\r\n\t{\r\n\t\t\"user\": \"Comercio\",\r\n\t\t\"month\": \"{{urlParam 'month'}}\",\r\n\t\t\"period\": \"15-{{urlParam 'month'}}\",\r\n\t\t\"initial\": 125.25,\r\n\t\t\"final\": 145.63,\r\n\t\t\"consumption\": 20.47,\r\n\t\t\"rate\": 2.4,\r\n\t\t\"ammount\": 45.36\r\n\t}\r\n]",
+          "latency": 0,
+          "statusCode": 202,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "service",
+              "value": "agua",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "params",
+              "modifier": "month",
+              "value": "10",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

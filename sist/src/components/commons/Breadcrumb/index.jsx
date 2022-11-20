@@ -5,8 +5,8 @@ import routes from '../../../routes';
 const Breadcrumb = () => {
   const currentLocation = useLocation().pathname;
 
-  const getRouteName = (pathname, routes) => {
-    const currentRoute = routes.find((route) => route.path === pathname);
+  const getRouteName = (pathname: any, routes: any) => {
+    const currentRoute = routes.find((route: any) => route.path === pathname);
     return currentRoute ? currentRoute.name : false;
   };
 

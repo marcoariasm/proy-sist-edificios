@@ -1,5 +1,5 @@
 import React from 'react';
-import Breadcrumb from '../../../components/commons/Breadcrumb';
+import Breadcrumb from '../../../components/commons/Breadcrumb/index.jsx';
 import SmallBoxInfo from '../../../components/SmallBoxInfo';
 import Card from './../../../components/commons/Card';
 import Dona from './../../../components/charts/Dona/index';

@@ -1,5 +1,5 @@
 import React from 'react';
-import Breadcrumb from '../../../../components/commons/Breadcrumb';
+import Breadcrumb from '../../../../components/commons/Breadcrumb/index.jsx';
 import Odontogram from '../../../../components/Odontogram';
 import mre from '../../../../services/mock/medicalrecords.json';
 

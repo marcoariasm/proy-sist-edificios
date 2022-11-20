@@ -9,7 +9,7 @@ const Services = React.lazy(() => import('../views/pages/Services'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: '/dashboard', name: 'Dashboard', element: Dashboard, exact: true },
+  { path: '/dashboard', name: 'Dashboard', element: Services, exact: true },
   { path: '/medicalrecord', name: 'Historia Clínica', element: MedicalRecord, exact: true },
   { path: '/medicalrecord/list', name: 'Listado de Historias Clínicas', element: ListMedicalRecords },
   { path: '/doctors', name: 'Doctores', element: DoctorsList, exact: true },

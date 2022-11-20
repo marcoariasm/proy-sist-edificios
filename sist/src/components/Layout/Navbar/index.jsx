@@ -58,7 +58,7 @@ const index = ({
             </a>
             <div className='dropdown-menu dropdown-menu-lg dropdown-menu-right'>
               <span className='dropdown-item dropdown-header'>
-                Doctor Uno
+                Propietario
               </span>
               <div className='dropdown-divider'></div>
               <a href='!#' className='dropdown-item'>

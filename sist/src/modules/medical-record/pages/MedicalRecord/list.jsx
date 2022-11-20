@@ -1,5 +1,5 @@
 import React from 'react';
-import Breadcrumb from '../../../../components/commons/Breadcrumb';
+import Breadcrumb from '../../../../components/commons/Breadcrumb/index.jsx';
 import Card from '../../../../components/commons/Card';
 import Swal from 'sweetalert2';
 import mr from '../../../../services/mock/medicalrecords.json';

@@ -74,10 +74,10 @@ const navBarNotificationsList = [
 // Sidebar constants
 const user = {
   srcUser: Avatar,
-  nameUser: 'Doctor Uno',
+  nameUser: 'Propietario Uno',
 };
 
-const title = 'Sistema Médico';
+const title = 'Sistema Edificio';
 
 // consts footer
 const textsFooter = {
