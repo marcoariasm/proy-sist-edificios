@@ -9,3 +9,6 @@ git remote add origin https://github.com/marcoariasm/proy1-sist-edificios.git
 git push -u origin main
 
 
+moodboard
+https://www.behance.net/collection/200774895/school-management-system-mockup
+
