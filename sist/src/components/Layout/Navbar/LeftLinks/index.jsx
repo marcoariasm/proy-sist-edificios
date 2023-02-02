@@ -8,9 +8,9 @@ const LeftLinks = ({ links }) => {
                 <Link className="nav-link" data-widget="pushmenu" to="#" role="button"><i className="fas fa-bars" /></Link>
             </li>
             {
-                links.map( link => {
+                links.map( (link, i) => {
                     return (
-                        <li className="nav-item d-none d-sm-inline-block">
+                        <li className="nav-item d-none d-sm-inline-block" key={i}>
                             <Link to={ link.href } className="nav-link">{ link.text }</Link>
                         </li>
                     )

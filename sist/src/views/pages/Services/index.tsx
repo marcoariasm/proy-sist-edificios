@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Breadcrumb from "../../../components/commons/Breadcrumb/index.jsx";
-import Card from "../../../components/commons/Card/index";
+import { useEffect, useState } from "react";
+import Breadcrumb from "../../../components/commons/Breadcrumb";
 import Tabs from "./components/Tabs/index";
 import { login } from './services/fetch';
 import { Months } from "../../../types/time";
@@ -61,10 +60,75 @@ const Services = () => {
 
           <div className="row mb-2">
             <div className="col-sm-6">
-              <h1 className="m-0">Servicios</h1>
+              <h1 className="m-0">Cuotas</h1>
             </div>
-            <Breadcrumb breadcrumbs={breadcrumbs} />
+            <Breadcrumb />
           </div>
+
+          {/* <div className="row mb-2">
+              <div className="col-md-3 col-sm-6 col-12">
+                <div className="bg-lightblue disabled color-palette info-box">
+                  <span className="info-box-icon"><i className="far fa-bookmark" /></span>
+                  <div className="info-box-content">
+                    <span className="info-box-text">Mantenimiento</span>
+                    <span className="info-box-number">41,410</span>
+                    <div className="progress">
+                      <div className="progress-bar" style={{width: '70%'}} />
+                    </div>
+                    <span className="progress-description">
+                      70% Increase in 30 Days
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-6 col-12">
+                <div className="bg-lightblue disabled color-palette info-box">
+                  <span className="info-box-icon"><i className="far fa-thumbs-up" /></span>
+                  <div className="info-box-content">
+                    <span className="info-box-text">Extraordinarias</span>
+                    <span className="info-box-number">41,410</span>
+                    <div className="progress">
+                      <div className="progress-bar" style={{width: '70%'}} />
+                    </div>
+                    <span className="progress-description">
+                      70% Increase in 30 Days
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-6 col-12">
+                <div className="bg-lightblue disabled color-palette info-box">
+                  <span className="info-box-icon"><i className="far fa-calendar-alt" /></span>
+                  <div className="info-box-content">
+                    <span className="info-box-text">Servicios</span>
+                    <span className="info-box-number">41,410</span>
+                    <div className="progress">
+                      <div className="progress-bar" style={{width: '70%'}} />
+                    </div>
+                    <span className="progress-description">
+                      70% Increase in 30 Days
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-6 col-12">
+                <div className="bg-lightblue disabled color-palette info-box">
+                  <span className="info-box-icon"><i className="fas fa-comments" /></span>
+                  <div className="info-box-content">
+                    <span className="info-box-text">Individuales</span>
+                    <span className="info-box-number">41,410</span>
+                    <div className="progress">
+                      <div className="progress-bar" style={{width: '70%'}} />
+                    </div>
+                    <span className="progress-description">
+                      70% Increase in 30 Days
+                    </span>
+                  </div>
+                </div>
+              </div> 
+
+          </div>*/}
+          
 
         </div>
       </div>
@@ -72,39 +136,17 @@ const Services = () => {
       <section className="content">
         <div className="container-fluid">
 
-          <div className="row">
+          {/* <div className="row">
             <section className="col lg-12 connectedSortable">
 
               <div className="card">
                 <div className="card-body">
-                  {/* <ul className="pagination pagination-month justify-content-center">
-                    <li key='cero' className="page-item">
-                      <a className="page-link" href="#">
-                        «
-                      </a>
-                    </li>
-                    {
-                      months.map(month => {return (
-                        <li key={month.name} className={`page-item${active ? ' active' : ''}`} onClick={() => handleMonthSelected(month.number)} >
-                          <a className="page-link" href="#">
-                            <p className="page-month">{month.name}</p>
-                            <p className="page-year">2022</p>
-                          </a>
-                        </li>    
-                      )})
-                    }
-                    <li key='infinito' className="page-item" onClick={() => console.log('click en futuro')}>
-                      <a className="page-link" href="#">
-                        »
-                      </a>
-                    </li>
-                  </ul> */}
                   <Pagination monthList={months} setMonthSelected={setMonthSelected}/>
                 </div>
               </div>
               
             </section>
-          </div>
+          </div> */}
 
           <div className="row">
             <div className="col-12">

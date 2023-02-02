@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Navigate, Routes, Route } from 'react-router-dom';
 import Layout from '../../../components/Layout';
 import Preloader from '../../../components/Layout/Preloader';
@@ -22,7 +22,7 @@ const Base = () => {
               )
             );
           })}
-          <Route path='/' element={<Navigate to='dashboard' replace />} />
+          <Route path='/' element={<Navigate to='operations/dues' replace />} />
         </Routes>
       </Layout>
     </Suspense>

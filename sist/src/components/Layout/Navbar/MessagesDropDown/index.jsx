@@ -10,8 +10,8 @@ const MessagesDropDown = ({ number, navBarMessagesList }) => {
             <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
             {/* Message Start */}
             {
-                navBarMessagesList.map( message => { return(
-                    <>
+                navBarMessagesList.map( (message, i) => { return(
+                    <div key={i}>
                         <a href={ message.href } className="dropdown-item">
                             <div className="media">
                                 <img src={ message.userImage } alt="User Avatar" className="img-size-50 mr-3 img-circle" />
@@ -26,7 +26,7 @@ const MessagesDropDown = ({ number, navBarMessagesList }) => {
                             </div>    
                         </a>
                         <div className="dropdown-divider" />
-                    </>
+                    </div>
                 )})
             }
             {/* Message End */}

@@ -1,32 +1,32 @@
 import { useState } from "react";
-import MaintenanceTable from './../MaintenanceTable';
-import ExtraordinaryTable from './../ExtraordinaryTable';
-import ServicesTable from './../ServicesTable';
-import './custom.css';
-import { titleCase } from './../../../../../utils/string';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import DuesAccordions from "../accordions/DuesParametersAccordions";
+// import ExtraordinaryTable from '../tables/ExtraordinaryTable';
+import ServicesTable from '../tables/ServicesTable';
+import { titleCase } from '../../utils/string';
+import './dues.css';
 
-const TabContent = [
-  {id: 0, title: 'mantenimiento', icon:'fas fa-building', element: MaintenanceTable},
-  {id: 1, title: 'extraordinarias', icon:'fas fa-calendar-plus', element: ExtraordinaryTable},
-  {id: 2, title: 'servicios', icon:'fas fa-tint', element: ServicesTable},
-  {id: 3, title: 'individuales', icon:'fas fa-key', element: ExtraordinaryTable},
-  {id: 4, title: 'recargos', icon:'fas fa-money-bill-wave', element: ExtraordinaryTable},
+const ParametersTabContent = [
+  {id: 0, title: 'cuotas', icon:'fas fa-tint', element: DuesAccordions},
+  {id: 1, title: 'unidades', icon:'fas fa-building', element: ServicesTable},
+  // {id: 2, title: 'extraordinarias', icon:'fas fa-calendar-plus', element: ExtraordinaryTable},
+  // {id: 3, title: 'individuales', icon:'fas fa-key', element: ExtraordinaryTable},
+  // {id: 4, title: 'recargos', icon:'fas fa-money-bill-wave', element: ExtraordinaryTable},
 ];
 
-const Tabs = ({setService}) => {
+const ParametersTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleClickTab = (title, key) => {
-    setService(title);
+    // setService(title);
     setActiveTab(key);
   }
 
   return (
     <div className="card card-tabs">
-      <div className="bg-lightblue palette-color card-header p-0 pt-1">
+      <div className="bg-warning card-header p-0 pt-1">
         <ul className="nav nav-tabs" id="dues-tabs" role="tablist">
-          {TabContent.map((tab, idx) => { return(
+          {ParametersTabContent.map((tab, idx) => { return(
             <li
               key={idx}
               className="nav-item"
@@ -48,16 +48,11 @@ const Tabs = ({setService}) => {
               </a>
             </li>)
           })}
-          <li className="ml-auto mr-2 mt-2">
-            <Link to="/management/parameters">
-              <i class="fa-solid fa-gear"></i>&nbsp;<strong>Configurar Cuotas</strong>
-            </Link>
-          </li>
         </ul>
       </div>
 
       <div className="card-body">
-        {TabContent.map((tab, idx) => {return(
+        {ParametersTabContent.map((tab, idx) => {return(
           <div key={idx} className="tab-content" id={`dues-tabs-${tab.title}-tabContent`}>
           <div
             className={`tab-pane fade ${idx === activeTab ? 'active show' : ''}`}
@@ -75,4 +70,4 @@ const Tabs = ({setService}) => {
   );
 };
 
-export default Tabs;
+export default ParametersTabs;

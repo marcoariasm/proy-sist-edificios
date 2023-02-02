@@ -77,11 +77,11 @@ const user = {
   nameUser: 'Propietario Uno',
 };
 
-const title = 'Sistema Edificio';
+const title = 'Proyecto Edificio 1';
 
 // consts footer
 const textsFooter = {
-  rights: 'Derechos reservados © 2021. Desarrollado por',
+  rights: 'Derechos reservados © 2023. Desarrollado por',
   href: 'https://google.com/',
   developer: 'Team',
   version: '1.0.0',

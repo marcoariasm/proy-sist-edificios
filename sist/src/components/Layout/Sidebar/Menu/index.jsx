@@ -14,8 +14,8 @@ const Menu = ({ menuList }) => {
                 with font-awesome or any other icon font library */}
         {menuList.map((e, idx) => {
           return (
-            <>
-              <li className={`nav-header ${e.header === '' ? 'hidden' : ''}`} key={idx}>
+            <div key={idx}>
+              <li className={`nav-header ${e.header === '' ? 'hidden' : ''}`}>
                 {e.header !== '' ? e.header : ''}
               </li>
 
@@ -47,17 +47,16 @@ const Menu = ({ menuList }) => {
                     {t.items &&
                       t.items.map((item, ide) => {
                         return (
-                          <ul className='nav nav-treeview'>
+                          <ul className='nav nav-treeview' key={ide}>
                             <li className={"nav-item"}>
                               <NavLink
                                 exact
                                 to={item.itemLink}
                                 className={({isActive}) => 'nav-link'+(isActive.isActive?' active':'')}
-                                key={ide}
                               >
                                 <i
                                   className='far fa-circle nav-icon'
-                                  style={{ fontSize: '0.5rem' }}
+                                  style={{ fontSize: '0.35rem' }}
                                 />
                                 <p>{item.item}</p>
                               </NavLink>
@@ -68,7 +67,7 @@ const Menu = ({ menuList }) => {
                   </li>
                 );
               })}
-            </>
+            </div>
           );
         })}
       </ul>

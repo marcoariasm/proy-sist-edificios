@@ -1,7 +1,7 @@
 {
   "uuid": "1341cab0-85f3-4be1-91ac-f2c9483984af",
   "lastMigration": 24,
-  "name": "Inquilinos",
+  "name": "Proyecto Edificio 1",
   "endpointPrefix": "",
   "latency": 0,
   "port": 8000,
@@ -17,7 +17,7 @@
           "uuid": "849de4b9-ab85-4265-ba06-a9cdc5346217",
           "body": "[\r\n  {\r\n\t\t\"user\": \"101\",\r\n\t\t\"month\": \"{{urlParam 'service'}}\",\r\n\t\t\"period\": \"15-{{urlParam 'month'}}\",\r\n\t\t\"initial\": 125.25,\r\n\t\t\"final\": 145.63,\r\n\t\t\"consumption\": 20.47,\r\n\t\t\"rate\": 2.4,\r\n\t\t\"ammount\": 45.36\r\n\t},\r\n\t{\r\n\t\t\"user\": \"Comercio\",\r\n\t\t\"month\": \"{{urlParam 'month'}}\",\r\n\t\t\"period\": \"15-{{urlParam 'month'}}\",\r\n\t\t\"initial\": 125.25,\r\n\t\t\"final\": 145.63,\r\n\t\t\"consumption\": 20.47,\r\n\t\t\"rate\": 2.4,\r\n\t\t\"ammount\": 45.36\r\n\t}\r\n]",
           "latency": 0,
-          "statusCode": 202,
+          "statusCode": 200,
           "label": "",
           "headers": [],
           "bodyType": "INLINE",
@@ -41,6 +41,87 @@
             }
           ],
           "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "7eb27d19-1090-42ff-9381-048f7ecf319c",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "units",
+      "responses": [
+        {
+          "uuid": "da68aafd-48f8-4831-a769-60f777e4251f",
+          "body": "[\n  {\n    \"unitId\": \"a\", \n    \"name\": \"Sección 1\",\n    \"type\": \"Departamento\",\n    \"area\": 202.25,\n    \"floor\": 1\n  },\n  {\n    \"unitId\": \"b\",\n    \"name\": \"Sección Comercio\",\n    \"type\": \"Comercio\",\n    \"area\": 0,\n    \"floor\": 1\n  },\n  {\n    \"unitId\": \"c\",\n    \"name\": \"Sección 2\",\n    \"type\": \"Departamento\",\n    \"area\": 0,\n    \"floor\": 1\n  },\n  {\n    \"unitId\": \"d\",\n    \"name\": \"Sección 3\",\n    \"type\": \"Departamento\",\n    \"area\": 0,\n    \"floor\": 1\n  },\n  {\n    \"unitId\": \"e\",\n    \"name\": \"Sección 4\",\n    \"type\": \"Departamento\",\n    \"area\": 0,\n    \"floor\": 1\n  },\n  {\n    \"unitId\": \"f\",\n    \"name\": \"Sección 5\",\n    \"type\": \"Departamento\",\n    \"area\": 0,\n    \"floor\": 1\n  },\n  {\n    \"unitId\": \"g\",\n    \"name\": \"Sección 6\",\n    \"type\": \"Azotea\",\n    \"area\": 0,\n    \"floor\": 1\n  }\n]",
+          "latency": 0,
+          "statusCode": 202,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "7503fef6-cc11-47ef-8276-b80dd94a3628",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "units/list",
+      "responses": [
+        {
+          "uuid": "048b9c06-7c5e-4cea-9503-88af5c6462bd",
+          "body": "[\n  \"Sección 1\",\n  \"Sección Comercio\",\n  \"Sección 2\",\n  \"Sección 3\",\n  \"Sección 4\",\n  \"Sección 5\",\n  \"Sección 6\"\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "ea6ec877-aa62-4642-a85e-0987c9e3fa92",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "dues",
+      "responses": [
+        {
+          "uuid": "70a429b8-1733-4d82-9375-8866d3ec6c4b",
+          "body": "[\n  {\n    \"unit\" : \"Sección 1\",\n    \"current\": 5,\n    \"before\": 0,\n    \"difference\": 5,\n    \"unitPrice\": 3,\n    \"monthYear\": \"Enero-2023\",\n    \"total\": 15\n  },\n  {\n    \"unit\" : \"Sección 2\",\n    \"current\": 5,\n    \"before\": 0,\n    \"difference\": 5,\n    \"unitPrice\": 3,\n    \"monthYear\": \"Enero-2023\",\n    \"total\": 15\n  },\n  {\n    \"unit\" : \"Sección 3\",\n    \"current\": 5,\n    \"before\": 0,\n    \"difference\": 5,\n    \"unitPrice\": 3,\n    \"monthYear\": \"Enero-2023\",\n    \"total\": 15\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true

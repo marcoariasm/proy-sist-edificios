@@ -11,8 +11,8 @@ const NotificationsDropdown = ({ number, navBarNotificationsList }) => {
                 <span className="dropdown-item dropdown-header">{`${number} Notificaciones`}</span>
                 <div className="dropdown-divider" />
                 {
-                    navBarNotificationsList.map(notification => { return(
-                        <> 
+                    navBarNotificationsList.map((notification, i) => { return(
+                        <div key={i}> 
                             <a href={ notification.hrefMessages } className="dropdown-item">
                                 <i className={`fas ${ notification.icon } mr-2`} />
                                 { 
@@ -23,7 +23,7 @@ const NotificationsDropdown = ({ number, navBarNotificationsList }) => {
                                 <span className="float-right text-muted text-sm">{ notification.longAgo }</span>
                             </a>
                             <div className="dropdown-divider" />
-                        </>
+                        </div>
                     )
                     })
                 }

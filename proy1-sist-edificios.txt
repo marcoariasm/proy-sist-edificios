@@ -12,3 +12,23 @@ git push -u origin main
 moodboard
 https://www.behance.net/collection/200774895/school-management-system-mockup
 
+
+
+npm install react-bootstrap-table-next --save
+npm i react-bootstrap-table2-editor --save
+
+npm i @types/react-bootstrap-table2-toolkit
+
+
+react-bootstrap-table
+
+
+
+adminlte para react
+https://adminlte.io/docs/3.2/implementations.html
+https://github.com/erdkse/adminlte-3-react
+
+
+react-date-picker
+https://projects.wojtekmaj.pl/react-date-picker/
+https://github.com/wojtekmaj/react-date-picker
